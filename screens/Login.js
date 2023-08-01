@@ -1,14 +1,14 @@
 import React from 'react'
-import { Button, Text, View, StyleSheet } from 'react-native';
+import { Button, Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 const Login = () => {
   return (
     <View style={styles.container}>
-      <Text>Login!</Text>
-      <Button
-        title='Click Here'
-        onPress={() => alert('Button Clicked')}
+      <Image 
+        source={require('../assets/rn-social-logo.png')}
+        style={styles.logo}
       />
+      
     </View>
   );
 }
@@ -16,9 +16,33 @@ const Login = () => {
 export default Login;
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
+  container: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+    paddingTop: 50
+  },
+  logo: {
+    height: 150,
+    width: 150,
+    resizeMode: 'cover',
+  },
+  text: {
+    fontFamily: 'Kufam-SemiBoldItalic',
+    fontSize: 28,
+    marginBottom: 10,
+    color: '#051d5f',
+  },
+  navButton: {
+    marginTop: 15,
+  },
+  forgotButton: {
+    marginVertical: 35,
+  },
+  navButtonText: {
+    fontSize: 18,
+    fontWeight: '500',
+    color: '#2e64e5',
+    fontFamily: 'Lato-Regular',
+  },
   });
